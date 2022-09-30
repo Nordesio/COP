@@ -31,7 +31,6 @@ namespace Libarary1_COP
             }
         }
 
-        private List<string> config;
         
         public int SelectedIndex
         {
@@ -136,17 +135,17 @@ namespace Libarary1_COP
             Vals.Reverse();
             var item = new T();
             var count = item.GetType().GetProperties().Length;
-            for (int i = 0; i < config.Count; ++i)
+            for (int i = 0; i < Hierarhy.Count; ++i)
             {
                 if (i < count)
                 {
-                    var pinfo = item.GetType().GetProperty(config[i]);
+                    var pinfo = item.GetType().GetProperty(Hierarhy[i]);
                     if (pinfo != null)
                         pinfo.SetValue(item, Convert.ChangeType(Vals[i], pinfo.PropertyType));
                 }
                 else
                 {
-                    var finfo = item.GetType().GetField(config[i]);
+                    var finfo = item.GetType().GetField(Hierarhy[i]);
                     if (finfo != null)
                     {
                         finfo.SetValue(item, Convert.ChangeType(Vals[i], finfo.FieldType));
