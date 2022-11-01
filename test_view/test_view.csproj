@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Libarary1_COP\Libarary1_COP.csproj" />
+    <ProjectReference Include="..\Library2_COP\Library2_COP.csproj" />
   </ItemGroup>
 
 </Project>

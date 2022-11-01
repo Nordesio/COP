@@ -32,7 +32,7 @@ namespace Libarary1_COP
         }
 
         
-        public int SelectedIndex
+       /* public int SelectedIndex
         {
             get
             {
@@ -48,7 +48,7 @@ namespace Libarary1_COP
                 }
                 throw new IndexOutOfRangeException();
             }
-        }
+        }*/
         public void setHierarchy(List<string> str)
         {
             Hierarhy = str;         
@@ -60,11 +60,6 @@ namespace Libarary1_COP
             if (obj == null)
                 throw new NullReferenceException("Add not null object");
             Type type = obj.GetType();
-            //List<String> poles= new List<String>();
-            /*foreach (var f in type.GetFields().Where(f => f.IsPublic))
-            {
-                poles.Add(f.Name);
-            }*/
 
             var elementType = obj.GetType();
                 var currentLevelNodes = treeView.Nodes;
