@@ -25,7 +25,7 @@ namespace Library2_COP
         /// Метод создания отчета
         /// </summary>
         public void ReportSaveDiagramm(string filename, string title, string nameGistogram,
-            Legend legend, List<Test> list, string category, string value)
+            Legend legend, List<ForDiagramm> list, string category, string value)
         {
             if (string.IsNullOrEmpty(filename) || string.IsNullOrEmpty(title) || string.IsNullOrEmpty(nameGistogram) || list.Count == 0)
             {
@@ -38,7 +38,7 @@ namespace Library2_COP
         /// Создание документа
         /// </summary>
         private void CreateDoc(string fileName, string title, string nameDiagram,
-            Legend chartLegendPosition, List<Test> list, string category, string value)
+            Legend chartLegendPosition, List<ForDiagramm> list, string category, string value)
         {
             if (list == null)
             {

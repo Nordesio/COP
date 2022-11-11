@@ -95,7 +95,7 @@ namespace test_view
         private void buttonTable_Click(object sender, EventArgs e)
         {
            
-            List<Test> test = new List<Test>();
+            List<ForTable> test = new List<ForTable>();
             List<string> colTitles = new List<string>();
             List<string> colFields = new List<string>();
             List<Tuple<int, int>> mergeCells = new List<Tuple<int, int>>();
@@ -104,10 +104,10 @@ namespace test_view
             colTitles.Add("Имя");
             colTitles.Add("Фамилия");
             colTitles.Add("Возраст");
-            colTitles.Add("шк1");
-            colTitles.Add("шк2");
-            colTitles.Add("шк3");
-            colTitles.Add("шк4");
+            colTitles.Add("Статус2");
+            colTitles.Add("Имя2");
+            colTitles.Add("Фамилия2");
+            colTitles.Add("Возраст2");
             mergeTitles.Add("Личные данные");
 
             mergeTitles.Add("рнд");
@@ -117,15 +117,15 @@ namespace test_view
             colFields.Add("name");
             colFields.Add("family");
             colFields.Add("year");
-            colFields.Add("ir1");
-            colFields.Add("ir2");
-            colFields.Add("ir3");
-            colFields.Add("ir4");
-            test.Add(new Test { status = "no", name = "vlad", family = "gusev", year = 20, ir1 = "no", ir2 = "vlad", ir3 = "gusev", ir4 = 20 });
-            test.Add(new Test { status = "yes", name = "kirill", family = "dolgov", year = 20, ir1 = "no", ir2 = "vlad", ir3 = "gusev", ir4 = 20 });
-            test.Add(new Test { status = "no", name = "alex", family = "senkin", year = 20, ir1 = "no", ir2 = "vlad", ir3 = "gusev", ir4 = 20 });
-            test.Add(new Test { status = "yes", name = "123", family = "321", year = 1000, ir1 = "no", ir2 = "vlad", ir3 = "gusev", ir4 = 20 });
-            test.Add(new Test { status = "no", name = "321", family = "123", year = 201, ir1 = "no", ir2 = "vlad", ir3 = "gusev", ir4 = 20 });
+            colFields.Add("status2");
+            colFields.Add("name2");
+            colFields.Add("family2");
+            colFields.Add("year2");
+            test.Add(new ForTable { status = "no", name = "vlad", family = "gusev", year = 20, status2 = "no", name2 = "vlad", family2 = "gusev", year2 = 20 });
+            test.Add(new ForTable { status = "yes", name = "kirill", family = "dolgov", year = 20, status2 = "no", name2 = "vlad", family2 = "gusev", year2 = 20 });
+            test.Add(new ForTable { status = "no", name = "alex", family = "senkin", year = 20, status2 = "no", name2 = "vlad", family2 = "gusev", year2 = 20 });
+            test.Add(new ForTable { status = "yes", name = "123", family = "321", year = 1000, status2 = "no", name2 = "vlad", family2 = "gusev", year2 = 20 });
+            test.Add(new ForTable { status = "no", name = "321", family = "123", year = 201, status2 = "no", name2 = "vlad", family2 = "gusev", year2 = 20 });
 
 
             string fileName = "";
@@ -154,12 +154,12 @@ namespace test_view
                    MessageBoxIcon.Information);
                 }
             }
-            List<Test> data = new List<Test>();
-            data.Add(new Test { name = "123", year = 312 });
-            data.Add(new Test { name = "456", year = 654 });
-            data.Add(new Test { name = "789", year = 987 });
-            data.Add(new Test { name = "101112", year = 121 });
-            data.Add(new Test { name = "aaaaa", year = 999 });
+            List<ForDiagramm> data = new List<ForDiagramm>();
+            data.Add(new ForDiagramm { name = "123", count = 312 });
+            data.Add(new ForDiagramm { name = "456", count = 654 });
+            data.Add(new ForDiagramm { name = "789", count = 987 });
+            data.Add(new ForDiagramm { name = "101112", count = 121 });
+            data.Add(new ForDiagramm { name = "aaaaa", count = 999 });
             Legend legend = new Legend();
             wordDiagramm.ReportSaveDiagramm(fileName, "PieDiagramm", "PieDiagramm", legend, data, "name", "year");
         }

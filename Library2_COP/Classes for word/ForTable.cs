@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Library2_COP.Classes_for_word
 {
-    public class Test
+    public class ForTable
     {
         public string status { get; set; }
         public string name { get; set; }
         public string family { get; set; }
         public int year { get; set; }
-        public string ir1 { get; set; }
-        public string ir2 { get; set; }
-        public string ir3 { get; set; }
-        public int ir4 { get; set; }
+        public string status2 { get; set; }
+        public string name2 { get; set; }
+        public string family2 { get; set; }
+        public int year2 { get; set; }
 
     }
 }
