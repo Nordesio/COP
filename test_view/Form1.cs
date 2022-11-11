@@ -161,7 +161,7 @@ namespace test_view
             data.Add(new ForDiagramm { name = "101112", count = 121 });
             data.Add(new ForDiagramm { name = "aaaaa", count = 999 });
             Legend legend = new Legend();
-            wordDiagramm.ReportSaveDiagramm(fileName, "PieDiagramm", "PieDiagramm", legend, data, "name", "year");
+            wordDiagramm.ReportSaveDiagramm(fileName, "PieDiagramm", "PieDiagramm", legend, data, "name", "count");
         }
     }
 }
