@@ -6,24 +6,10 @@ using System.ComponentModel;
 using Library2_COP.Classes_for_word;
 using Xceed.Document.NET;
 using Xceed.Words.NET;
-
 namespace Library2_COP
 {
     public partial class WordDiagramm : Component
     {
-        /*
-            Не визуальный компонент для создания документа с
-            гистограммой. У компонента должен быть публичный метод,
-            который должен принимать на вход имя файла (включая путь до
-            файла), название документа (заголовок в документе), заголовок
-            для диаграммы, указание расположения легенды для диаграммы
-            (создать для этого перечисление), набор данных для диаграммы
-            (название серии и данные для графика). Должна быть проверка
-             на заполненность входных данных значениями.
-          */
-        /// <summary>
-        /// Метод создания отчета
-        /// </summary>
         public void ReportSaveDiagramm(string filename, string title, string nameGistogram,
             Legend legend, List<ForDiagramm> list, string category, string value)
         {
@@ -52,7 +38,7 @@ namespace Library2_COP
                 document.Paragraphs[0].Alignment = Alignment.center;
                 document.Paragraphs[0].FontSize(20);
                 document.Paragraphs[0].Bold();
-                // создаём линейную диаграмму
+                // создаём круговую диаграмму
                 PieChart circleChart = new PieChart();
                 // добавляем легенду 
                 circleChart.AddLegend((ChartLegendPosition)chartLegendPosition, false);

@@ -103,7 +103,7 @@ namespace Library2_COP
                     for (int y = xTup.Item1; y <= xTup.Item2; y++) {
                         
                         tbl.Cell(y, 1).Split(1, 2);
-                        tbl.Cell(y, 2).Range.Text = colTitles[y - 1];
+                        tbl.Cell(y, 2).Range.Text = colTitles[y - 1];   
                         tbl.Cell(y, 1).Range.Text = "";
                     }
 
