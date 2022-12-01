@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Plugins\" />
+    <Folder Include="Plugin\" />
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ComponentsLibraryNet60" Version="1.0.0" />
+    <PackageReference Include="ControlsLibraryNet60" Version="1.0.0" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LogicDB\LogicDB.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="lab1COP">
+      <HintPath>..\View\libraries\lab1COP.dll</HintPath>
+    </Reference>
+    <Reference Include="Library2_COP">
+      <HintPath>..\View\libraries\Library2_COP.dll</HintPath>
+    </Reference>
+    <Reference Include="PluginsConventionLibrary">
+      <HintPath>Interfaces\PluginsConventionLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualComponentLibrary">
+      <HintPath>..\View\libraries\VisualComponentLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

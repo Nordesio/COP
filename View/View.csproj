@@ -15,13 +15,18 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="System.ComponentModel.Composition" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\LogicDB\LogicDB.csproj" />
+    <ProjectReference Include="..\Plugins\Plugins.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="PluginsConventionLibrary">
+      <HintPath>..\Plugins\Interfaces\PluginsConventionLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="VisualComponentLibrary">
       <HintPath>libraries\VisualComponentLibrary.dll</HintPath>
     </Reference>

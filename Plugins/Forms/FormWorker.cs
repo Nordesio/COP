@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace View.Forms
+namespace Plugins.Forms
 {
     public partial class FormWorker : Form
     {
@@ -40,7 +40,7 @@ namespace View.Forms
         }
 
         private void LoadData()
-        {   
+        {
             if (id.HasValue)
             {
                 try
@@ -70,8 +70,8 @@ namespace View.Forms
                 DialogResult = DialogResult.OK;
                 Close();
             }
-            
-            
+
+
         }
 
         private bool Save()
@@ -85,7 +85,7 @@ namespace View.Forms
                         try
                         {
                             string value = inputBox.Value;
-                            
+
                             orderLogic.CreateOrUpdate(new WorkerBindingModel()
                             {
                                 Id = id,
@@ -100,7 +100,7 @@ namespace View.Forms
                         {
                             MessageBox.Show("Введеный номер некорректен", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        
+
                     }
                     return false;
                 }
